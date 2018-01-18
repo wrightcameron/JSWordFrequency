@@ -1,14 +1,9 @@
 //Command line arguments
-/*process.argv.forEach((val, index) => {
-    console.log(`${index}: ${val}`);
-  });
-*/
 if(process.argv.length == 2 || process.argv.length > 3){
     process.stdout.write("$node wf.js <textFile>");
     process.exit();
 }
 
-//process.stdout.write(process.argv.length.toString());
 //Read text file
 var fs = require('fs');
 try {  
@@ -16,7 +11,13 @@ try {
 } catch(e) {
     console.log('Error:', e.stack);
 }
-console.log(data);
+data = data.trim().toLowerCase();
+data = data.replace(/[|&;:$%@"<>()+,.]/g,"");
+var wordList = data.split(" ");
+//console.log(data);
+//for (var i in wordList) {  
+//    console.log(wordList[i]);
+//}  
 /*
 with open(sys.argv[1]) as file:
     readData = file.read()
@@ -27,5 +28,22 @@ with open(sys.argv[1]) as file:
 */
 
 //store word frequencies in dict
+var wordDict = {};
+//console.log(wordList);
+for(var i in wordList){
+    word = wordList[i];
+    //console.log(word);
+    if(word in wordDict){
+        wordDict[word] = wordDict[word] + 1;
+    }else{
+        wordDict[word] = 1;
+    }
+    console.log(word+" "+wordDict[word]);
+}
 
+/*for(var key in wordDict) {
+    var value = wordDict[key];
+    console.log(key+value);
+  }
+*/
 //Print word frequncies
