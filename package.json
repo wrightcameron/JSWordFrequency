@@ -1,0 +1,15 @@
+{
+  "name": "nodewf",
+  "version": "1.0.0",
+  "description": "counts word frequencies",
+  "main": "wf.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "word",
+    "frequencies"
+  ],
+  "author": "Cameron Wright",
+  "license": "ISC"
+}
