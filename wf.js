@@ -38,12 +38,11 @@ for(var i in wordList){
     }else{
         wordDict[word] = 1;
     }
-    console.log(word+" "+wordDict[word]);
 }
 
-/*for(var key in wordDict) {
+for(var key in wordDict) {
     var value = wordDict[key];
-    console.log(key+value);
+    console.log(key+" "+value);
   }
-*/
+
 //Print word frequncies
