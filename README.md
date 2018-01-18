@@ -9,6 +9,7 @@ understanding the language better.  This program counts the word frequency
 for a given text file.
 
 ##Manifest
+
 |Filename       | Description                                                       |
 |---------------|-------------------------------------------------------------------|
 |wf.js          | word frequency program                                            |
